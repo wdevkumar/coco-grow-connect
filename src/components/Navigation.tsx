@@ -13,7 +13,6 @@ const Navigation = () => {
     { name: 'Products', path: '/products' },
     { name: 'Why Choose Us', path: '/why-choose-us' },
     { name: 'Gallery', path: '/gallery' },
-    { name: 'Blog', path: '/blog' },
     { name: 'Contact', path: '/contact' },
   ];
 
