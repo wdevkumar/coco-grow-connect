@@ -1,7 +1,7 @@
-import { Button } from '@/components/ui/button';
-import { ArrowRight } from 'lucide-react';
-import { useNavigate } from 'react-router-dom';
-import heroImage from '@/assets/hero-coconut-peat.jpg';
+import { Button } from "@/components/ui/button";
+import { ArrowRight } from "lucide-react";
+import { useNavigate } from "react-router-dom";
+import heroImage from "@/assets/hero-coconut-peat.jpg";
 
 const HeroSection = () => {
   const navigate = useNavigate();
@@ -19,24 +19,25 @@ const HeroSection = () => {
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 text-center text-white">
         <div className="max-w-4xl mx-auto space-y-6">
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight">
-            Nurturing Growth with 
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+            PT Relvin Alam Nusantara Exports
             <span className="block text-accent"> Nature's Coir</span>
           </h1>
-          
+
           <p className="text-xl md:text-2xl lg:text-3xl font-light opacity-90 max-w-3xl mx-auto leading-relaxed">
             Premium Coconut Coir for Sustainable Agriculture
           </p>
-          
+
           <p className="text-lg md:text-xl opacity-80 max-w-2xl mx-auto">
-            100% organic coconut coir from Southeast Asia, delivering eco-friendly growing media worldwide
+            100% organic coconut coir from Southeast Asia, delivering
+            eco-friendly growing media worldwide
           </p>
 
           <div className="flex justify-center pt-8">
-            <Button 
-              size="lg" 
+            <Button
+              size="lg"
               className="bg-accent text-accent-foreground hover:bg-accent/90 text-lg px-8 py-4 shadow-large transition-smooth"
-              onClick={() => navigate('/products')}
+              onClick={() => navigate("/products")}
             >
               Explore Products
               <ArrowRight className="ml-2 h-5 w-5" />
