@@ -238,10 +238,7 @@ const Products = () => {
                     </div>
                   </div>
 
-                  <div className="flex flex-col sm:flex-row gap-4">
-                    <Button className="bg-primary hover:bg-primary/90">
-                      Request Quote
-                    </Button>
+                  <div className="flex justify-center">
                     <Button variant="outline">
                       Download Spec Sheet
                     </Button>

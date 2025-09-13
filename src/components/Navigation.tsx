@@ -43,9 +43,6 @@ const Navigation = () => {
                 {item.name}
               </Link>
             ))}
-            <Button variant="default" size="sm" className="bg-primary hover:bg-primary/90">
-              Get Quote
-            </Button>
           </div>
 
           {/* Mobile menu button */}
@@ -77,9 +74,6 @@ const Navigation = () => {
                   {item.name}
                 </Link>
               ))}
-              <Button className="w-full bg-primary hover:bg-primary/90">
-                Get Quote
-              </Button>
             </div>
           </div>
         )}

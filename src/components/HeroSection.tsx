@@ -1,8 +1,11 @@
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 import heroImage from '@/assets/hero-coconut-peat.jpg';
 
 const HeroSection = () => {
+  const navigate = useNavigate();
+
   return (
     <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
       {/* Background Image */}
@@ -29,17 +32,14 @@ const HeroSection = () => {
             100% organic coconut coir from Southeast Asia, delivering eco-friendly growing media worldwide
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center pt-8">
-            <Button size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 text-lg px-8 py-4 shadow-large transition-smooth">
+          <div className="flex justify-center pt-8">
+            <Button 
+              size="lg" 
+              className="bg-accent text-accent-foreground hover:bg-accent/90 text-lg px-8 py-4 shadow-large transition-smooth"
+              onClick={() => navigate('/products')}
+            >
               Explore Products
               <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
-            <Button 
-              variant="outline" 
-              size="lg" 
-              className="border-white/30 text-white hover:bg-white/10 hover:border-white/50 text-lg px-8 py-4 transition-smooth"
-            >
-              Get Quote
             </Button>
           </div>
         </div>
