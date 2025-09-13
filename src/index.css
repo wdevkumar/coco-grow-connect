@@ -2,39 +2,63 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+/* Definition of the design system - Earthy, sustainable coconut peat exporter theme
 All colors MUST be HSL.
 */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 48 20% 98%;
+    --foreground: 25 15% 15%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 25 15% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 25 15% 15%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Earthy green primary */
+    --primary: 120 25% 35%;
+    --primary-foreground: 0 0% 98%;
+    
+    /* Warm brown secondary */
+    --secondary: 30 20% 85%;
+    --secondary-foreground: 25 15% 15%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 48 15% 92%;
+    --muted-foreground: 25 10% 45%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Warm tan accent */
+    --accent: 35 30% 75%;
+    --accent-foreground: 25 15% 15%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 48 15% 88%;
+    --input: 48 15% 88%;
+    --ring: 120 25% 35%;
+
+    /* Custom design tokens */
+    --earth-green: 120 25% 35%;
+    --earth-brown: 25 30% 45%;
+    --earth-tan: 35 25% 65%;
+    --earth-cream: 48 20% 95%;
+    --earth-sage: 85 15% 55%;
+    
+    /* Gradients */
+    --gradient-earth: linear-gradient(135deg, hsl(120 25% 35%), hsl(85 15% 55%));
+    --gradient-warm: linear-gradient(135deg, hsl(35 25% 65%), hsl(25 30% 45%));
+    --gradient-hero: linear-gradient(135deg, hsl(120 25% 35% / 0.9), hsl(25 30% 45% / 0.9));
+    
+    /* Shadows */
+    --shadow-soft: 0 2px 10px hsl(25 15% 15% / 0.1);
+    --shadow-medium: 0 4px 20px hsl(25 15% 15% / 0.15);
+    --shadow-large: 0 8px 30px hsl(25 15% 15% / 0.2);
+    
+    /* Transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
     --radius: 0.5rem;
 
@@ -100,6 +124,62 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans;
+  }
+}
+
+@layer components {
+  .gradient-earth {
+    background: var(--gradient-earth);
+  }
+  
+  .gradient-warm {
+    background: var(--gradient-warm);
+  }
+  
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+  
+  .shadow-soft {
+    box-shadow: var(--shadow-soft);
+  }
+  
+  .shadow-medium {
+    box-shadow: var(--shadow-medium);
+  }
+  
+  .shadow-large {
+    box-shadow: var(--shadow-large);
+  }
+  
+  .transition-smooth {
+    transition: var(--transition-smooth);
+  }
+  
+  .transition-bounce {
+    transition: var(--transition-bounce);
+  }
+}
+
+@layer utilities {
+  .text-earth-green {
+    color: hsl(var(--earth-green));
+  }
+  
+  .text-earth-brown {
+    color: hsl(var(--earth-brown));
+  }
+  
+  .text-earth-tan {
+    color: hsl(var(--earth-tan));
+  }
+  
+  .bg-earth-cream {
+    background-color: hsl(var(--earth-cream));
+  }
+  
+  .bg-earth-sage {
+    background-color: hsl(var(--earth-sage));
   }
 }
